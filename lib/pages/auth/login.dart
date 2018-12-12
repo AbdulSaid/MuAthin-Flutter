@@ -25,7 +25,7 @@ class _LoginState extends State<Login> {
       iOSLargeTitle: true,
       color: Config.bgColor,
       title: Text(
-        'MuAthin',
+        'Login',
         style: TextStyle(color: Config.pColor),
       ),
       leading: Container(),

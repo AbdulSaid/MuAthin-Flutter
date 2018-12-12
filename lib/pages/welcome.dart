@@ -21,7 +21,7 @@ class _WelcomeState extends State<Welcome> {
       btmPadding = 25.0;
     }
 
-    Widget c = Material(
+    return Material(
       color: Config.bgColor,
       child: Container(
         padding: EdgeInsets.only(left: 25.0, top: 25.0, right: 25.0, bottom: btmPadding),
@@ -60,7 +60,5 @@ class _WelcomeState extends State<Welcome> {
         ),
       ),
     );
-
-    return c;
   }
 }
