@@ -11,18 +11,9 @@ class Login extends StatefulWidget {
 class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
-    Widget c = Material(
-      child: Stack(
-        children: <Widget>[
-          Center(
-            child: Column(
-              children: <Widget>[
-                Text('T'),
-                Text('MuAthin'),
-              ],
-            ),
-          ),
-        ],
+    Widget c = Container(
+      child: Center(
+        child: Text('Login'),
       ),
     );
 
@@ -31,9 +22,17 @@ class _LoginState extends State<Login> {
       color: Config.bgColor,
       title: Text(
         'Login',
-        style: TextStyle(color: Config.pColor),
+        style: TextStyle(color: Config.sColor),
       ),
-      leading: Container(),
+      leading: IconButton(
+        icon: Icon(
+          Icons.close,
+          color: Config.sColor,
+        ),
+        onPressed: () {
+          Navigator.pop(context);
+        },
+      ),
       actions: <Widget>[Container()],
       heroTag: 'Login',
       androidView: c,

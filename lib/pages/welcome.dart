@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:muathin/config/config.dart';
+import 'package:muathin/pages/auth/login.dart';
 import 'package:muathin/widgets/misc/button.dart';
 
 class Welcome extends StatefulWidget {
@@ -27,7 +28,11 @@ class _WelcomeState extends State<Welcome> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
-                Image.asset(Config.pathLogo, height: 200.0, color: Config.pColor,),
+                Image.asset(
+                  Config.pathLogo,
+                  height: 200.0,
+                  color: Config.pColor,
+                ),
                 Text(
                   'MuAthin',
                   style: TextStyle(color: Config.pColor, fontSize: 50.0, fontWeight: FontWeight.bold),
@@ -49,7 +54,11 @@ class _WelcomeState extends State<Welcome> {
                   text: 'Login',
                   color: Config.sColor,
                   height: 60.0,
-                  onTap: () {},
+                  onTap: () {
+                    Platform.isIOS
+                        ? Navigator.push(context, CupertinoPageRoute(builder: (context) => Login(), fullscreenDialog: true))
+                        : Navigator.push(context, MaterialPageRoute(builder: (context) => Login(), fullscreenDialog: true));
+                  },
                 ),
                 SizedBox(
                   height: 10.0,
