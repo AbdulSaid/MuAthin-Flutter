@@ -15,7 +15,12 @@ class _LoginState extends State<Login> {
       child: Stack(
         children: <Widget>[
           Center(
-            child: Text('MuAthin'),
+            child: Column(
+              children: <Widget>[
+                Text('T'),
+                Text('MuAthin'),
+              ],
+            ),
           ),
         ],
       ),

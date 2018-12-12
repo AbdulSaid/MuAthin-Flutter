@@ -15,12 +15,9 @@ class Config {
   static String permissionLocation = 'permission-location';
   static String permissionAddressIndex = 'permission-address-index';
 
-  // Assets Paths
-  static String pathIconGallery = 'lib/assets/images/icon-gallery.png';
+  // Paths
+  static String pathLogo = 'lib/assets/images/taha.png';
   static String pathUploadPhoto = 'lib/assets/images/upload-photo.png';
-  static String pathPlaceholderUser = 'lib/assets/images/placeholder-profile.png';
-  static String pathNoProducts = 'lib/assets/images/no-products.png';
-  static String pathGradient = 'lib/assets/images/gradient.png';
 
   // Database Ref
   static String alerts = 'alerts';

@@ -15,11 +15,7 @@ class _WelcomeState extends State<Welcome> {
     Size deviceSize = MediaQuery.of(context).size;
     double btmPadding;
 
-    if (Platform.isIOS && deviceSize.height >= 812.0) {
-      btmPadding = 50.0;
-    } else {
-      btmPadding = 25.0;
-    }
+    Platform.isIOS && deviceSize.height >= 812.0 ? btmPadding = 50.0 : btmPadding = 25.0;
 
     return Material(
       color: Config.bgColor,
@@ -27,11 +23,22 @@ class _WelcomeState extends State<Welcome> {
         padding: EdgeInsets.only(left: 25.0, top: 25.0, right: 25.0, bottom: btmPadding),
         child: Stack(
           children: <Widget>[
-            Center(
-              child: Text(
-                'MuAthin',
-                style: TextStyle(color: Config.pColor, fontSize: 50.0, fontWeight: FontWeight.bold),
-              ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                Image.asset(Config.pathLogo, height: 200.0, color: Config.pColor,),
+                Text(
+                  'MuAthin',
+                  style: TextStyle(color: Config.pColor, fontSize: 50.0, fontWeight: FontWeight.bold),
+                  textAlign: TextAlign.center,
+                ),
+                Text(
+                  'A Call To Prayer',
+                  style: TextStyle(color: Config.pColor, fontSize: 20.0, fontWeight: FontWeight.w300),
+                  textAlign: TextAlign.center,
+                ),
+              ],
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
