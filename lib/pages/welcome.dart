@@ -10,7 +10,16 @@ class Welcome extends StatefulWidget {
 class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
-    Widget c = Container();
+    Widget c = Container(
+      child: Center(
+        child: Text(
+          'Hello',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+      ),
+    );
 
     return PAScaffold(
       iOSLargeTitle: true,
@@ -25,5 +34,4 @@ class _WelcomeState extends State<Welcome> {
       ),
     );
   }
-
 }
